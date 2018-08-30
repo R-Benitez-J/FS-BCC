@@ -39,7 +39,8 @@ import weka.attributeSelection.GreedyStepwise;
 import java.util.*;
 
 /**
- * BCC.java - Bayesian Classifier Chains. 
+ * FSBCC.java - Feature Selection Bayesian Classifier Chains
+ * Similar as the original algorithm Bayesian Classifier Chains(BCC). 
  * Probably would be more aptly called Bayesian Classifier Tree.
  * Creates a maximum spanning tree based on marginal label dependence; then employs a CC classifier. 
  * The original paper used Naive Bayes as a base classifier, hence the name. 
@@ -52,11 +53,6 @@ import java.util.*;
 public class FSBCC extends CC {
 
 	private static final long serialVersionUID = 585507197229071545L;
-	/**
-	 * Para separar clases e intancias Ricardo
-	 */
-	//protected Classifier m_MultiClassifiers[] = null;
-	//protected Instances m_InstancesTemplates[] = null;
 
 	/**
 	 * Description to display in the GUI.
@@ -88,8 +84,6 @@ public class FSBCC extends CC {
 	@Override
 	public void buildClassifier(Instances D) throws Exception {
 		testCapabilities(D);
-
-		System.out.println("Inicio del Algoritmo");
 
 		m_R = new Random(getSeed());
 		int L = D.classIndex();
@@ -185,9 +179,7 @@ public class FSBCC extends CC {
 			GreedyStepwise search = new GreedyStepwise();
 			filter.setSearch(search);
 		}
-		//GreedyStepwise search = new GreedyStepwise();
-		//Ranker search = new Ranker();
-		//search.setSearchBackwards(true);
+		
 		filter.setEvaluator(eval);
 
 

@@ -1,6 +1,6 @@
 # FS-BCC
-Bayesian Chain Classifier (BCC) presented by See Zaragoza et al. "Bayesian Classifier Chains for Multi-dimensional Classification. IJCAI 2011. It is an algorithm for multilabel classification task.
-This project implementes Feature Selection in the original algorithm.
+Bayesian Chain Classifier (BCC) presented by See Zaragoza et al. "Bayesian Classifier Chains for Multi-dimensional Classification. IJCAI 2011". It is an algorithm for multilabel classification task.
+This project implementes Feature Selection in the original algorithm. "Bayesian Chain Classifier with Feature Selection for Multi-label Classification. MICAI 2018"
 The source code can be integrate in MEKA following instruction below.
 ## Prerequisites
 You need to donwload MEKA source code avidable in https://github.com/Waikato/meka.
